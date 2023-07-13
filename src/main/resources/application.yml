@@ -5,8 +5,10 @@ spring:
     url: "jdbc:mysql://localhost:3306/my_db?useSSL=false&serverTimezone=UTC"
     username: admin
     password: mypas
+  profiles:
+    active: default
 
 server:
   port: 8080
   servlet:
-    context-path: /springboot-rest
+    context-path: /rest-jpa
