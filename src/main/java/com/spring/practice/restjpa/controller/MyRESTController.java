@@ -24,7 +24,7 @@ public class MyRESTController {
     }
 
     @GetMapping("/employee/{id}")
-    public Employee getEmployee(@PathVariable int id) {
+    public Employee getEmployee(@PathVariable Long id) {
         return employeeService.getEmployee(id);
     }
 
@@ -39,7 +39,7 @@ public class MyRESTController {
     }
 
     @DeleteMapping("/employee/{id}")
-    private String deleteEmployee(@PathVariable int id) {
+    private String deleteEmployee(@PathVariable Long id) {
         employeeService.deleteEmployee(id);
         return "Employee with ID = " + id + " was deleted.";
     }

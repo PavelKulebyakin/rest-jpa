@@ -23,7 +23,7 @@ public class DefaultEmployeeService implements EmployeeService {
     }
 
     @Override
-    public Employee getEmployee(int id) {
+    public Employee getEmployee(Long id) {
         Employee employee = null;
         Optional<Employee> optional = employeeRepository.findById(id);
         if (optional.isPresent()) {                                           // Check if null
@@ -38,7 +38,7 @@ public class DefaultEmployeeService implements EmployeeService {
     }
 
     @Override
-    public void deleteEmployee(int id) {
+    public void deleteEmployee(Long id) {
         employeeRepository.deleteById(id);
     }
 
